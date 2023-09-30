@@ -1,7 +1,7 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
-SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c 
+SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -19,5 +19,5 @@ fclean: clean
 re: fclean all
 
 so:
-		$(CC) -nostartfilees -fPIC $(CFLAGS) $(SRCS)
-		gcc -nostartfilees -shared -o libft.so $(OBJS)
+		$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+		gcc -nostartfiles -shared -o libft.so $(OBJS)
