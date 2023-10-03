@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcavadas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/03 09:35:50 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/03 09:41:07 by jcavadas         ###   ########.fr       */
+/*   Created: 2023/10/03 09:25:16 by jcavadas          #+#    #+#             */
+/*   Updated: 2023/10/03 09:43:43 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+void	ft_putstr_fd(char *s, int fd)
 {
-	return (c >= 0 && c <= 127);
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
 }
 /*
-int main(void)
+int	main(void)
 {
-    printf("%d\n", ft_isascii(20));
-    printf("%d\n", ft_isascii(60));
-    printf("%d\n", ft_isascii(128));
-    printf("%d\n", ft_isascii(200));
-    return (0);
-}
-*/
+	ft_putstr_fd("AwA EwE OwO", 1);
+	return (0);
+}*/

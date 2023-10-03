@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcavadas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/03 09:35:50 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/03 09:41:07 by jcavadas         ###   ########.fr       */
+/*   Created: 2023/10/03 09:02:27 by jcavadas          #+#    #+#             */
+/*   Updated: 2023/10/03 10:36:43 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	return (c >= 0 && c <= 127);
+	size_t	i;
+	char	*string;
+
+	string = (char *)s;
+	i = 0;
+	while (i < n)
+	{
+		string[i] = c;
+		i++;
+	}
+	return (s);
 }
 /*
-int main(void)
+int	main(void)
 {
-    printf("%d\n", ft_isascii(20));
-    printf("%d\n", ft_isascii(60));
-    printf("%d\n", ft_isascii(128));
-    printf("%d\n", ft_isascii(200));
-    return (0);
-}
-*/
+	char	cenas[] = "AwA OwO EwE Idek anymore";
+
+	ft_putstr_fd(ft_memset(cenas,'E',4), 1);
+	return (0);
+}*/
