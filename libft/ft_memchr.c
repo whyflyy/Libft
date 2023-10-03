@@ -6,13 +6,13 @@
 /*   By: jcavadas <jcavadas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 15:48:16 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/03 15:58:33 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/10/03 16:00:23 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*str;
 

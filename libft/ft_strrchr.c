@@ -6,7 +6,7 @@
 /*   By: jcavadas <jcavadas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 15:33:13 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/03 15:56:16 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/10/03 16:00:43 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 	{
 		if (*str == (unsigned char)c)
 			return (str);
-		str++;	
+		str++;
 	}
 	if (c == 0)
 		return (str);
