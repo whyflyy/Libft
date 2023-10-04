@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcavadas <jcavadas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/03 15:48:16 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/03 16:00:23 by jcavadas         ###   ########.fr       */
+/*   Created: 2023/10/04 10:37:36 by jcavadas          #+#    #+#             */
+/*   Updated: 2023/10/04 10:56:47 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char	*str;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
-	str = (unsigned char *)s;
-	c = (unsigned char)c;
-	while (n && *str != c)
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	while (n && *str1 == *str2)
 	{
-		++str;
+		++str1;
+		++str2;
 		--n;
 	}
 	if (n)
-		return ((void *)str);
+		return (*str1 - *str2);
 	else
-		return (NULL);
+		return (0);
 }
 /*
 int	main(void)
 {
-	char	str[] = "Find me if u can!";
-	char	c = 'i';
-
-	ft_putstr_fd(ft_memchr(str, c, ft_strlen(str)), 1);
+	char	str1[] = "Somos diferentes?";
+	char	str2[] = "Somos diferentes!";
+	
+	printf("%d", ft_memcmp(str1, str2, 17));
 	ft_putchar_fd('\n', 1);
-	return (0);
 }*/

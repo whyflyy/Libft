@@ -1,40 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcavadas <jcavadas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/03 15:48:16 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/03 16:00:23 by jcavadas         ###   ########.fr       */
+/*   Created: 2023/10/04 09:44:04 by jcavadas          #+#    #+#             */
+/*   Updated: 2023/10/04 11:26:34 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strchr(const char *s, int c)
 {
-	unsigned char	*str;
+	int	i;
 
-	str = (unsigned char *)s;
-	c = (unsigned char)c;
-	while (n && *str != c)
-	{
-		++str;
-		--n;
-	}
-	if (n)
-		return ((void *)str);
-	else
+	i = 0;
+	while ((s[i] != (char)c) && (s[i] != '\0'))
+		i++;
+	if (s[i] != (char)c)
 		return (NULL);
+	else
+		return ((char *)&s[i]);
 }
 /*
 int	main(void)
 {
 	char	str[] = "Find me if u can!";
-	char	c = 'i';
+	char	c = '!';
 
-	ft_putstr_fd(ft_memchr(str, c, ft_strlen(str)), 1);
+	ft_putstr_fd(ft_strchr(str, c), 1);
 	ft_putchar_fd('\n', 1);
 	return (0);
 }*/

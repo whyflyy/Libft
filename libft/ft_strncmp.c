@@ -1,40 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcavadas <jcavadas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/03 15:48:16 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/03 16:00:23 by jcavadas         ###   ########.fr       */
+/*   Created: 2023/10/04 11:33:50 by jcavadas          #+#    #+#             */
+/*   Updated: 2023/10/04 11:58:35 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned char	*str;
+	size_t	i;
 
-	str = (unsigned char *)s;
-	c = (unsigned char)c;
-	while (n && *str != c)
+	i = 0;
+	while ((s1[i] || s2[i]) && i < n)
 	{
-		++str;
-		--n;
+		if ((unsigned char)s1[i] > (unsigned char)s2[i])
+			return (1);
+		if ((unsigned char)s1[i] < (unsigned char)s2[i])
+			return (-1);
+		i++;
 	}
-	if (n)
-		return ((void *)str);
-	else
-		return (NULL);
+	return (0);
 }
 /*
 int	main(void)
 {
-	char	str[] = "Find me if u can!";
-	char	c = 'i';
-
-	ft_putstr_fd(ft_memchr(str, c, ft_strlen(str)), 1);
+	char	str1[] = "AwA EwE OwO UwU";
+	char	str2[] = "AwA TwT OwO UwU";
+	
+	printf("%d", ft_strncmp(str1, str2, ft_strlen(str1)));
 	ft_putchar_fd('\n', 1);
 	return (0);
 }*/
