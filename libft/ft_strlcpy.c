@@ -1,39 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcavadas <jcavadas@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 11:33:50 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/05 10:30:35 by jcavadas         ###   ########.fr       */
+/*   Created: 2023/10/05 09:44:13 by jcavadas          #+#    #+#             */
+/*   Updated: 2023/10/05 10:30:31 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 
 	i = 0;
-	while ((s1[i] || s2[i]) && i < n)
+	if (size == 0)
+		return ((size_t)ft_strlen(src));
+	while (i < (size - 1) && src[i])
 	{
-		if ((unsigned char)s1[i] > (unsigned char)s2[i])
-			return (1);
-		if ((unsigned char)s1[i] < (unsigned char)s2[i])
-			return (-1);
+		dest[i] = src[i];
 		i++;
 	}
-	return (0);
+	dest[i] = '\0';
+	return ((size_t)ft_strlen(src));
 }
 /*
 int	main(void)
 {
-	char	str1[] = "AwA EwE OwO UwU";
-	char	str2[] = "AwA TwT OwO UwU";
-	
-	printf("%d", ft_strncmp(str1, str2, ft_strlen(str1)));
-	ft_putchar_fd('\n', 1);
+	char	dest[] = "Bom dia";
+	char	src[] = "Eu vou ser copiada";
+
+	printf("%zu\n", ft_strlcpy(dest, src, 25));
+	printf("%s\n", dest);
 	return (0);
 }*/
