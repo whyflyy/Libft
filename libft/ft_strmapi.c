@@ -1,34 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcavadas <jcavadas@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/03 09:36:51 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/06 16:48:03 by jcavadas         ###   ########.fr       */
+/*   Created: 2023/10/06 16:21:09 by jcavadas          #+#    #+#             */
+/*   Updated: 2023/10/06 17:29:28 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t	i;
+	size_t	len;
+	char	*res;
 
+	if (!s)
+		return (NULL);
+	len = ft_strlen(s);
+	res = (char *)malloc(sizeof(char) * len + 1);
 	i = 0;
-	while (c[i])
+	if (!res)
+		return (NULL);
+	while (i < len)
+	{
+		res[i] = (*f)(i, s[i]);
 		i++;
-	return (i);
+	}
+	res[i] = '\0';
+	return (res);
 }
 /*
-int main(void)
+char	ft_test(unsigned int i, char s)
 {
-	ft_putnbr_fd(ft_strlen("AwA OwO EwE"), 1);
-	ft_putchar_fd('\n', 1);
-	ft_putnbr_fd(ft_strlen("ehe\0UwUw"), 1);
-	ft_putchar_fd('\n', 1);
-	ft_putnbr_fd(ft_strlen("ahahahahahahahahahahha"), 1);
-	ft_putchar_fd('\n', 1);
-    return (0);
+	i = 1;
+	s += i;
+	return (s);
+}
+int	main()
+{
+	char	str[] = "abcdefghijklmnop";
+	ft_putendl_fd(ft_strmapi(str, ft_test), 1);
 }*/

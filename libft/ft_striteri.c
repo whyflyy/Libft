@@ -1,34 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcavadas <jcavadas@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/03 09:36:51 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/06 16:48:03 by jcavadas         ###   ########.fr       */
+/*   Created: 2023/10/06 17:31:16 by jcavadas          #+#    #+#             */
+/*   Updated: 2023/10/06 17:40:41 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	size_t	i;
+	unsigned int	i;
 
+	if (!s)
+		return ;
 	i = 0;
-	while (c[i])
+	while (*s != '\0')
+	{
+		f(i, s);
 		i++;
-	return (i);
+		s++;
+	}
 }
 /*
-int main(void)
+void	ft_test(unsigned int i, char *str)
 {
-	ft_putnbr_fd(ft_strlen("AwA OwO EwE"), 1);
-	ft_putchar_fd('\n', 1);
-	ft_putnbr_fd(ft_strlen("ehe\0UwUw"), 1);
-	ft_putchar_fd('\n', 1);
-	ft_putnbr_fd(ft_strlen("ahahahahahahahahahahha"), 1);
-	ft_putchar_fd('\n', 1);
-    return (0);
+	(void) i;
+	*str += 1;
+}
+
+int	main()
+{
+	char	str[] = "abcdefghijklmnop";
+	ft_striteri(str, ft_test);
+	ft_putendl_fd(str, 1);
 }*/
