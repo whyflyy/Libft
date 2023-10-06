@@ -6,7 +6,7 @@
 /*   By: jcavadas <jcavadas@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 09:34:46 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/05 10:30:15 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/10/06 12:29:51 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,16 @@ int	ft_isalnum(int c)
 /*
 int main(void)
 {
-    printf("%d\n", ft_isalnum('\n'));
-    printf("%d\n", ft_isalnum('U'));
-    printf("%d\n", ft_isalnum('w'));
-    printf("%d\n", ft_isalnum('U'));
-    printf("%d\n", ft_isalnum('2'));
+    ft_putnbr_fd(ft_isalnum('\n'), 1);
+    ft_putchar_fd('\n', 1);
+    ft_putnbr_fd(ft_isalnum('U'), 1);
+    ft_putchar_fd('\n', 1);
+    ft_putnbr_fd(ft_isalnum('w'), 1);
+    ft_putchar_fd('\n', 1);
+    ft_putnbr_fd(ft_isalnum('U'), 1);
+    ft_putchar_fd('\n', 1);
+    ft_putnbr_fd(ft_isalnum('2'), 1);
+    ft_putchar_fd('\n', 1);
     return (0);
 }
 */

@@ -6,7 +6,7 @@
 /*   By: jcavadas <jcavadas@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 09:36:07 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/05 10:30:22 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/10/06 12:36:26 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,14 @@ int	ft_isdigit(int c)
 /*
 int main(void)
 {
-    printf("%d\n", ft_isdigit('2'));
-    printf("%d\n", ft_isdigit('7'));
-    printf("%d\n", ft_isdigit('a'));
-    printf("%d\n", ft_isdigit('\n'));
+    ft_putnbr_fd(ft_isdigit('2'), 1);
+	ft_putchar_fd('\n', 1);
+	ft_putnbr_fd(ft_isdigit('7'), 1);
+	ft_putchar_fd('\n', 1);
+	ft_putnbr_fd(ft_isdigit('a'), 1);
+	ft_putchar_fd('\n', 1);
+	ft_putnbr_fd(ft_isdigit('\n'), 1);
+	ft_putchar_fd('\n', 1);
     return (0);
 }
 */

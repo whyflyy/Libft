@@ -6,7 +6,7 @@
 /*   By: jcavadas <jcavadas@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 09:27:01 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/05 10:30:31 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/10/06 15:38:33 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ int	main(void)
 	char	dest[] = "Nos vamos ser";
 	char	src[] = "concatenadas";
 
-	printf("%zu\n", ft_strlcat(dest, src, 25));
-	printf("%s\n", dest);
+	ft_putnbr_fd(ft_strlcat(dest, src, 25), 1);
+	ft_putchar_fd('\n', 1);
+	ft_putstr_fd(dest, 1);
 	return (0);
 }*/

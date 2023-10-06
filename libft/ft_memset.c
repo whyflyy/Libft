@@ -6,7 +6,7 @@
 /*   By: jcavadas <jcavadas@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 09:02:27 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/05 10:30:28 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/10/06 15:31:25 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ int	main(void)
 {
 	char	cenas[] = "AwA OwO EwE Idek anymore";
 
-	ft_putstr_fd(ft_memset(cenas,'E',4), 1);
+	ft_putendl_fd(ft_memset(cenas,'E',4), 1);
 	return (0);
 }*/

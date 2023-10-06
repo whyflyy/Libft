@@ -6,7 +6,7 @@
 /*   By: jcavadas <jcavadas@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 09:44:13 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/05 10:30:31 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/10/06 15:39:45 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,11 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 /*
 int	main(void)
 {
-	char	dest[] = "Bom dia";
+	char	dest[] = "Ninguem me tira daqui!";
 	char	src[] = "Eu vou ser copiada";
 
-	printf("%zu\n", ft_strlcpy(dest, src, 25));
-	printf("%s\n", dest);
+	ft_putnbr_fd(ft_strlcpy(dest, src, 25), 1);
+	ft_putchar_fd('\n', 1);
+	ft_putstr_fd(dest, 1);
 	return (0);
 }*/

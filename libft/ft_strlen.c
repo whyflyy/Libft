@@ -6,7 +6,7 @@
 /*   By: jcavadas <jcavadas@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 09:36:51 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/05 10:30:33 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/10/06 15:41:35 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,12 @@ size_t	ft_strlen(const char *c)
 /*
 int main(void)
 {
-    printf("%ld\n", ft_strlen("AwA OwO EwE"));
-    printf("%ld\n", ft_strlen("ehe\0UwUw"));
-    printf("%ld\n", ft_strlen("ahahahahahahahahahahha"));
+	ft_putnbr_fd(ft_strlen("AwA OwO EwE"), 1);
+	ft_putchar_fd('\n', 1);
+	ft_putnbr_fd(ft_strlen("ehe\0UwUw"), 1);
+	ft_putchar_fd('\n', 1);
+	ft_putnbr_fd(ft_strlen("ahahahahahahahahahahha"), 1);
+	ft_putchar_fd('\n', 1);
     return (0);
-}
-*/
+}*/
+

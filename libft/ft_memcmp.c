@@ -6,7 +6,7 @@
 /*   By: jcavadas <jcavadas@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 10:37:36 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/05 10:30:24 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/10/06 12:40:41 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ int	main(void)
 	char	str1[] = "Somos diferentes?";
 	char	str2[] = "Somos diferentes!";
 	
-	printf("%d", ft_memcmp(str1, str2, 17));
+	ft_putnbr_fd(ft_memcmp(str1, str2, 17), 1);
 	ft_putchar_fd('\n', 1);
 }*/

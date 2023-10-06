@@ -6,7 +6,7 @@
 /*   By: jcavadas <jcavadas@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 10:25:16 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/05 10:44:55 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/10/06 12:22:10 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,15 @@ int	ft_atoi(const char *nptr)
 /*
 int	main(void)
 {
-	printf("%i\n", ft_atoi("  	  -12345678"));
-	printf("%i\n", ft_atoi("42"));
-	printf("%i\n", ft_atoi("+1234a5678"));
-	printf("%i\n", ft_atoi("--12"));
-	printf("%i\n", ft_atoi("ABC"));
+	ft_putnbr_fd(ft_atoi("	-12345678"), 1);
+	ft_putchar_fd('\n', 1);
+	ft_putnbr_fd(ft_atoi("42"), 1);
+	ft_putchar_fd('\n', 1);
+	ft_putnbr_fd(ft_atoi("+1234a5678"), 1);
+	ft_putchar_fd('\n', 1);
+	ft_putnbr_fd(ft_atoi("--12"), 1);
+	ft_putchar_fd('\n', 1);
+	ft_putnbr_fd(ft_atoi("ABC"), 1);
+	ft_putchar_fd('\n', 1);
 	return (0);
 }*/

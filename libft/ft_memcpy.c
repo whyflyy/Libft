@@ -6,7 +6,7 @@
 /*   By: jcavadas <jcavadas@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 12:22:27 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/05 10:30:24 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/10/06 12:41:28 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int	main(void)
 	char	str[] = "AwA EwE OwO UwU";
 	char	dest[16];
 
-	ft_putstr_fd(ft_memcpy(dest, str, 15), 1);
-	ft_putchar_fd('\n', 1);
+	ft_putendl_fd(ft_memcpy(dest, str, 15), 1);
 }
 */

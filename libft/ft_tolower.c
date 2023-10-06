@@ -6,7 +6,7 @@
 /*   By: jcavadas <jcavadas@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 10:00:36 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/05 10:30:38 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/10/06 16:13:16 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,15 @@ int	ft_tolower(int c)
 	else
 		return (c);
 }
+/*
+int	main(void)
+{
+	ft_putchar_fd(ft_tolower('U'), 1);
+	ft_putchar_fd('\n', 1);
+	ft_putchar_fd(ft_tolower('w'), 1);
+	ft_putchar_fd('\n', 1);
+	ft_putchar_fd(ft_tolower('U'), 1);
+	ft_putchar_fd('\n', 1);
+	ft_putchar_fd(ft_tolower('5'), 1);
+	ft_putchar_fd('\n', 1);
+}*/

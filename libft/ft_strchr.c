@@ -6,7 +6,7 @@
 /*   By: jcavadas <jcavadas@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 09:44:04 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/05 10:30:30 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/10/06 15:35:17 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ int	main(void)
 	char	str[] = "Find me if u can!";
 	char	c = '!';
 
-	ft_putstr_fd(ft_strchr(str, c), 1);
-	ft_putchar_fd('\n', 1);
+	ft_putendl_fd(ft_strchr(str, c), 1);
 	return (0);
 }*/

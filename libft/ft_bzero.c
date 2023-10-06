@@ -6,7 +6,7 @@
 /*   By: jcavadas <jcavadas@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 12:09:44 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/05 10:30:18 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/10/06 16:15:46 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(void)
 	ft_bzero(cenas, 3);
 	while (i < 15)
 	{
-		write(1, &cenas[i], 1);
+		ft_putchar_fd(cenas[i], 1);
 		i++;
 	}
 	return (0);

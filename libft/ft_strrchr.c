@@ -6,7 +6,7 @@
 /*   By: jcavadas <jcavadas@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 15:33:13 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/05 10:30:37 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/10/06 15:44:15 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,8 @@ char	*ft_strrchr(const char *str, int c)
 int	main(void)
 {
 	char	str[] = "Teste";
-	char	c = '\0';
+	char	c = 'e';
 
-	ft_putstr_fd(ft_strrchr(str, c), 1);
-	ft_putchar_fd('\n', 1);
+	ft_putendl_fd(ft_strrchr(str, c), 1);
 	return (0);
 }*/

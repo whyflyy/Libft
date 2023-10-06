@@ -6,7 +6,7 @@
 /*   By: jcavadas <jcavadas@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 11:33:50 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/05 10:30:35 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/10/06 15:42:38 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(void)
 	char	str1[] = "AwA EwE OwO UwU";
 	char	str2[] = "AwA TwT OwO UwU";
 	
-	printf("%d", ft_strncmp(str1, str2, ft_strlen(str1)));
+	ft_putnbr_fd(ft_strncmp(str1, str2, ft_strlen(str1)), 1);
 	ft_putchar_fd('\n', 1);
 	return (0);
 }*/
