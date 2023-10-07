@@ -6,7 +6,7 @@
 /*   By: jcavadas <jcavadas@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 09:27:01 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/06 15:38:33 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/10/07 10:26:34 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	srclen = ft_strlen(src);
 	i = 0;
 	j = destlen;
-	if (destlen >= size || size == 0)
+	if (destlen >= size)
 		return (size + srclen);
 	while (src[i] != '\0' && i < size - destlen - 1)
 	{
