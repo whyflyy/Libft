@@ -6,7 +6,7 @@
 /*   By: jcavadas <jcavadas@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 10:29:51 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/07 17:35:33 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/10/09 12:46:16 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,23 +22,23 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 /*
 int	main(void)
 {
+	// Creating a linked list
+    t_list *head = malloc(sizeof(t_list));
+    if (head == NULL) {
+        return 1;
+    }
+    head->content = "OwO";
+    head->next = NULL;
+	
+	//Creating a Node to add to the front of the list
 	t_list *newNode = malloc(sizeof(t_list));
     if (newNode == NULL) {
         return 1;
     }
     newNode->content = "UwU";
     newNode->next = NULL;
-
-    // Creating a linked list
-    t_list *head = malloc(sizeof(t_list));
-    if (head == NULL) {
-        free(newNode);
-        return 1;
-    }
-    head->content = "OwO";
-    head->next = NULL;
-
-    // Adding the new node to the front of the linked list
+	
+    // Adding the new node to the front of the list
     ft_lstadd_front(&head, newNode);
 
     //TRYING WITH ADDING ANOTHER ONE
