@@ -6,7 +6,7 @@
 /*   By: jcavadas <jcavadas@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 10:25:16 by jcavadas          #+#    #+#             */
-/*   Updated: 2023/10/06 12:22:10 by jcavadas         ###   ########.fr       */
+/*   Updated: 2023/10/10 11:20:12 by jcavadas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_atoi(const char *nptr)
 	}
 	return (nb * nop);
 }
-/*
+
 int	main(void)
 {
 	ft_putnbr_fd(ft_atoi("	-12345678"), 1);
@@ -52,4 +52,4 @@ int	main(void)
 	ft_putnbr_fd(ft_atoi("ABC"), 1);
 	ft_putchar_fd('\n', 1);
 	return (0);
-}*/
+}
